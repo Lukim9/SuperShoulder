@@ -68,7 +68,16 @@ public class ShoulderListener implements Listener {
                                     .add(direction.clone().multiply(x))
                                     .add(0, y, 0)
                                     .add(side.clone().multiply(z * 0.5)).getBlock();
-                            if(block.getChunk().isLoaded() && block.isSolid()) {
+                            Set<Material> unbreakables = EnumSet.of(
+                                    Material.BEDROCK,
+                                    Material.OBSIDIAN,
+                                    Material.END_PORTAL_FRAME,
+                                    Material.NETHER_PORTAL
+                            );
+
+                            if (!unbreakables.contains(block.getType())
+                                    && block.getChunk().isLoaded() && block.isSolid()
+                                    && block.getType().getBlastResistance() < 30.0f) {
                                 BlockData originalData = block.getBlockData();
                                 block.breakNaturally();
 
