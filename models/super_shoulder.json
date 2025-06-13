@@ -1,0 +1,17 @@
+{
+  "model": {
+    "type": "player",
+    "elements": [
+      {
+        "name": "rightArm",
+        "scale": [2.5, 2.5, 2.5],
+        "origin": [5, 2, 0]
+      },
+      {
+        "name": "leftArm",
+        "scale": [2.5, 2.5, 2.5],
+        "origin": [-5, 2, 0]
+      }
+    ]
+  }
+}

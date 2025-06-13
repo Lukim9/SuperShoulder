@@ -1,0 +1,4 @@
+name: SuperShoulder
+version: '1.0-SNAPSHOT'
+main: com.github.lukim9.superShoulder.SuperShoulder
+api-version: '1.21'
